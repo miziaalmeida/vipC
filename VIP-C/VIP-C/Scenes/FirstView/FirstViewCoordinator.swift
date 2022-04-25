@@ -28,7 +28,8 @@ extension FirstViewCoordinating {
     func start(with action: FirstViewAction) {
         switch action {
         case .openSecondView:
-            let controller = SecondViewViewController()
+            // Aqui na controller passaríamos a instancia de responsabilidade para a nova scene ou somente para a própria Controller, vai depender da estratégia e da ação que será tomada.
+            let controller = SecondViewFactory.make()
             viewController?.present(controller, animated: true)
         }
     }

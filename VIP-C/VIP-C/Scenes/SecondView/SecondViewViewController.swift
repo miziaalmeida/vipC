@@ -10,7 +10,6 @@ import UIKit
 protocol SecondViewViewControllerDisplay: AnyObject { }
 
 class SecondViewViewController: UIViewController {
-    
     private lazy var button: UIButton = {
         let button = UIButton()
         button.setTitle("SignOut", for: .normal)
@@ -21,7 +20,19 @@ class SecondViewViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
+    private let interactor: SecondViewInteracting
+    
+    init(interactor: SecondViewInteracting) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -50,5 +61,7 @@ class SecondViewViewController: UIViewController {
 extension SecondViewViewController: SecondViewViewControllerDisplay { }
 
 @objc extension SecondViewViewController {
-    func didTapButton() { }
+    func didTapButton() {
+        interactor.returnFirstViewController()
+    }
 }
