@@ -9,17 +9,16 @@
 import Foundation
 
 protocol FirstViewPresenting: AnyObject {
+    var viewController: FirstViewControllerDisplay? { get set }
     func didNextStep(with action: FirstViewAction)
-    var coordinator: FirstViewCoordinating? { get set }
 }
 
 final class FirstViewPresenter: FirstViewPresenting {
-    weak var coordinator: FirstViewCoordinating?
     weak var viewController: FirstViewControllerDisplay?
+    private let coordinator: FirstViewCoordinating?
     
     init(coordinator: FirstViewCoordinating) {
         self.coordinator = coordinator
-        //coordinator.viewController = viewController
     }
     
     func didNextStep(with action: FirstViewAction) {

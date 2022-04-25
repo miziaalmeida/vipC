@@ -12,15 +12,15 @@ protocol FirstViewInteracting: AnyObject {
 }
 
 final class FirstViewInteractor: FirstViewInteracting {
+    // private let service: FirstViewServicing -> pensando no momento em q vc precisar já fazer a integração com a service/worker
     private let presenter: FirstViewPresenting
-    private let coordinator: FirstViewCoordinating
     
-    init(presenter: FirstViewPresenting, coordinator: FirstViewCoordinating) {
+    init(presenter: FirstViewPresenting) {
         self.presenter = presenter
-        self.coordinator = coordinator
-        presenter.coordinator = coordinator
     }
-    
+}
+
+extension FirstViewInteractor {
     func openSecondViewController() {
         presenter.didNextStep(with: .openSecondView)
     }

@@ -21,11 +21,9 @@ protocol FirstViewCoordinating: AnyObject {
 
 final class FirstViewCoordinator: FirstViewCoordinating {
     weak var viewController: UIViewController?
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
-    
+}
+
+extension FirstViewCoordinating {
     // MARK: Função start do coordinator.. ela que passa a ref pra presenter de para onde o app deverá se mover
     func start(with action: FirstViewAction) {
         switch action {

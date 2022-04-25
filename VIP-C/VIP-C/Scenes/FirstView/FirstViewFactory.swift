@@ -12,15 +12,14 @@ import UIKit
 
 public enum FirstViewFactory {
     public static func make() -> UIViewController {
-        let controller = UIViewController()
-        let coordinator: FirstViewCoordinating = FirstViewCoordinator(viewController: controller)
-        let presenter = FirstViewPresenter(coordinator: coordinator)
-        let interactor: FirstViewInteracting = FirstViewInteractor(presenter: presenter, coordinator: coordinator)
+//        let service: FirstViewServicing = FirstViewService()
+        let coordinator: FirstViewCoordinating = FirstViewCoordinator()
+        let presenter: FirstViewPresenting = FirstViewPresenter(coordinator: coordinator)
+        let interactor: FirstViewInteracting = FirstViewInteractor(presenter: presenter)
         let viewController = FirstViewController(interactor: interactor)
-        presenter.coordinator = coordinator
-        presenter.viewController = viewController
-        coordinator.viewController = viewController
         
+        coordinator.viewController = viewController
+        presenter.viewController = viewController
         return viewController
     }
 }
