@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: Actions /Importância de se ter ou n um Equatable
+
 enum FirstViewAction: Equatable {
     case openSecondView
 }
@@ -24,6 +26,7 @@ final class FirstViewCoordinator: FirstViewCoordinating {
         self.viewController = viewController
     }
     
+    // MARK: Função start do coordinator.. ela que passa a ref pra presenter de para onde o app deverá se mover
     func start(with action: FirstViewAction) {
         switch action {
         case .openSecondView:

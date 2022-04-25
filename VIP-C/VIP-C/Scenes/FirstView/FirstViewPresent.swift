@@ -5,6 +5,7 @@
 //  Created by Mizia Lima on 24/04/22.
 //
 
+// MARK: Classe responsável por formatar a apresentação dos dados
 import Foundation
 
 protocol FirstViewPresenting: AnyObject {

@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol FirstViewServicing: AnyObject {
-    
-}
+protocol FirstViewServicing: AnyObject { }
 
-final class FirstViewService: FirstViewServicing {
-    
-}
+final class FirstViewService: FirstViewServicing { }

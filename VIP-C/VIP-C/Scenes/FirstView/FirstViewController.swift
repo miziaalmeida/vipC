@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol FirstViewControllerDisplay: AnyObject {
-    // 
-}
+protocol FirstViewControllerDisplay: AnyObject { }
 
 class FirstViewController: UIViewController {
     
@@ -25,16 +23,10 @@ class FirstViewController: UIViewController {
     }()
     
     private let interactor: FirstViewInteracting
-    private let presenter: FirstViewPresenting
-    private let coordinator: FirstViewCoordinating
     
-    init(interactor: FirstViewInteracting,
-         presenter: FirstViewPresenting,
-         coordinator: FirstViewCoordinating) {
+    // MARK: injeção das dependências necessárias
+    init(interactor: FirstViewInteracting) {
         self.interactor = interactor
-        self.presenter = presenter
-        self.coordinator = coordinator
-        presenter.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -68,6 +60,7 @@ class FirstViewController: UIViewController {
     }
 }
 
+// MARK: Abstração em protocols
 extension FirstViewController: FirstViewControllerDisplay { }
 
 @objc extension FirstViewController {

@@ -3,8 +3,8 @@
 //  VIP-C
 //
 //  Created by Mizia Lima on 24/04/22.
-//
 
+// MARK: Config da primary scene.. observe que estamos utilizando a Factory pra gerar a ViewController inicial, e se fosse uma navigation?
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
