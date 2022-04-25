@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		19473BBE28160EA300E5D9EB /* SecondViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BBD28160EA300E5D9EB /* SecondViewViewController.swift */; };
-		19473BC028162D7B00E5D9EB /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BBF28162D7B00E5D9EB /* Factory.swift */; };
+		19473BC028162D7B00E5D9EB /* FirstViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BBF28162D7B00E5D9EB /* FirstViewFactory.swift */; };
+		19473BC22816326800E5D9EB /* SecondViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BC12816326800E5D9EB /* SecondViewInteractor.swift */; };
+		19473BC42816327700E5D9EB /* SecondViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BC32816327700E5D9EB /* SecondViewPresenter.swift */; };
+		19473BC72816328600E5D9EB /* SecondViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BC62816328600E5D9EB /* SecondViewCoordinator.swift */; };
+		19473BC9281632DB00E5D9EB /* SecondViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19473BC8281632DB00E5D9EB /* SecondViewFactory.swift */; };
 		197989102815FAFF00A809E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979890F2815FAFF00A809E6 /* AppDelegate.swift */; };
 		197989122815FAFF00A809E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197989112815FAFF00A809E6 /* SceneDelegate.swift */; };
 		197989142815FAFF00A809E6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197989132815FAFF00A809E6 /* FirstViewController.swift */; };
@@ -42,7 +46,11 @@
 
 /* Begin PBXFileReference section */
 		19473BBD28160EA300E5D9EB /* SecondViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewViewController.swift; sourceTree = "<group>"; };
-		19473BBF28162D7B00E5D9EB /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		19473BBF28162D7B00E5D9EB /* FirstViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewFactory.swift; sourceTree = "<group>"; };
+		19473BC12816326800E5D9EB /* SecondViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewInteractor.swift; sourceTree = "<group>"; };
+		19473BC32816327700E5D9EB /* SecondViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewPresenter.swift; sourceTree = "<group>"; };
+		19473BC62816328600E5D9EB /* SecondViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCoordinator.swift; sourceTree = "<group>"; };
+		19473BC8281632DB00E5D9EB /* SecondViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewFactory.swift; sourceTree = "<group>"; };
 		1979890C2815FAFF00A809E6 /* VIP-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1979890F2815FAFF00A809E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		197989112815FAFF00A809E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,7 +146,6 @@
 			children = (
 				1979894A28160C5E00A809E6 /* SecondView */,
 				1979894928160C4100A809E6 /* FirstView */,
-				19473BBF28162D7B00E5D9EB /* Factory.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 		1979894928160C4100A809E6 /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
+				19473BBF28162D7B00E5D9EB /* FirstViewFactory.swift */,
 				197989412815FD0300A809E6 /* FirstViewInteractor.swift */,
 				197989132815FAFF00A809E6 /* FirstViewController.swift */,
 				197989432815FD1400A809E6 /* FirstViewPresent.swift */,
@@ -170,6 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				19473BBD28160EA300E5D9EB /* SecondViewViewController.swift */,
+				19473BC12816326800E5D9EB /* SecondViewInteractor.swift */,
+				19473BC32816327700E5D9EB /* SecondViewPresenter.swift */,
+				19473BC62816328600E5D9EB /* SecondViewCoordinator.swift */,
+				19473BC8281632DB00E5D9EB /* SecondViewFactory.swift */,
 			);
 			path = SecondView;
 			sourceTree = "<group>";
@@ -304,15 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19473BC42816327700E5D9EB /* SecondViewPresenter.swift in Sources */,
+				19473BC72816328600E5D9EB /* SecondViewCoordinator.swift in Sources */,
 				197989142815FAFF00A809E6 /* FirstViewController.swift in Sources */,
 				197989482815FD3000A809E6 /* FirstViewService.swift in Sources */,
 				197989102815FAFF00A809E6 /* AppDelegate.swift in Sources */,
 				197989462815FD1F00A809E6 /* FirstViewCoordinator.swift in Sources */,
 				197989422815FD0300A809E6 /* FirstViewInteractor.swift in Sources */,
-				19473BC028162D7B00E5D9EB /* Factory.swift in Sources */,
+				19473BC028162D7B00E5D9EB /* FirstViewFactory.swift in Sources */,
 				197989122815FAFF00A809E6 /* SceneDelegate.swift in Sources */,
 				197989442815FD1400A809E6 /* FirstViewPresent.swift in Sources */,
 				19473BBE28160EA300E5D9EB /* SecondViewViewController.swift in Sources */,
+				19473BC22816326800E5D9EB /* SecondViewInteractor.swift in Sources */,
+				19473BC9281632DB00E5D9EB /* SecondViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

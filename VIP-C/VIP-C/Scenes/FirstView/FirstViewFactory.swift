@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-public enum Factory {
+public enum FirstViewFactory {
     public static func make() -> UIViewController {
         let controller = UIViewController()
         let coordinator: FirstViewCoordinating = FirstViewCoordinator(viewController: controller)
